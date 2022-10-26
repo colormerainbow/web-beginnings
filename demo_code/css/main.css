@@ -1,0 +1,23 @@
+table {
+    width: 400px;
+    /* border-spacing: 4px; not needed right now, play with it */
+}
+th, caption{
+    text-align: left;
+}
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse; /*borders adj to each other - collapses it down to just a border line */
+
+}
+th, td{
+    padding: 10px;
+    /* padding for the contents of the table cells so it doesnt look as cramped*/
+}
+tr:nth-child(even) {
+    background-color: #fff;
+    /* color every other line */
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}

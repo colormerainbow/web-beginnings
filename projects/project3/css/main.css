@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kaushan+Script&family=Playfair+Display:wght@700&display=swap');
+
+/* overall site formats for background, fonts, page spread */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    background: hsla(170, 72%, 18%, 0.2) url(../images/ripples.jpg);
+}
+
+main {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* all hyperlinks have bold, italicized, underlined text */
+main a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* header formatting */
+header {
+    background-color: #152d54;
+    padding: .5rem;
+    display: flex;
+}
+
+header img {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.header-banner {
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* site-nav formatting */
+.site-nav ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.site-nav a {
+    color: #ffe0aa;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+/* status indicators for the site navigation */
+#home .home-pg,
+#objects .objects-pg,
+#wildlife .wildlife-pg,
+#future .future-pg {
+    color: lightblue;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+/* heading font styles */
+h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    color: #ffe0aa;
+    text-shadow: 0px 2px 2px black;
+}
+
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #152d54;
+}
+
+h2 {
+    text-align: center;
+    padding: .5rem 0 .5rem 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    padding: 2rem 0 1rem 0;
+}
+
+.highlight h3 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* format,style, and borders on all figures */
+figure {
+    border: 2px solid black;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    font-size: .8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*special page layout styles */
+.showcase figure,
+.showcase2 figure {
+    width: 90%;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.showcase2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.highlight {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.highlight p {
+    border: 3px double black;
+    width: 50%;
+    padding: 1rem;
+}
+
+.monument-units {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.indiv-unit {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.facts p {
+    padding: 1rem 0 1rem 0;
+}
+
+/* Format for the table chart */
+.table-section h2 {
+    margin: 3rem 0 2rem 0;
+}
+
+table,
+th,
+td {
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-weight: bold;
+    line-height: 5rem;
+    padding: 0 0 1rem 0;
+}
+
+th {
+    width: 280px;
+    background-color: #152d54;
+    color: #ffe0aa;
+    font-family: 'Inter', sans-serif;
+    padding: 7px 1px 7px 1px;
+    text-align: center;
+    font-size: .85rem;
+}
+
+td {
+    padding: .5rem;
+    font-size: .8rem;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+    /* color every other line */
+}
+
+tr:hover {
+    background: #ecc2c2;
+}
+
+tfoot a {
+    color: #ffe0aa;
+}
+
+/* ----Format for the site footer and disclaimer -----*/
+
+.credit-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.label {
+    font-weight: bold;
+    padding: .5rem 0 .5rem 0;
+}
+
+.revision {
+    font-weight: bold;
+    font-style: italic;
+    padding: .6rem 0 0 0;
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 0 2rem;
+}
+
+.links-footer li {
+    padding: .5rem 0 .5rem 0;
+}
+
+.site-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 .5rem 0 0;
+}
+
+.site-logos img {
+    max-width: 120px;
+}
+
+.site-info {
+    display: flex;
+    flex-direction: row;
+    padding: .2rem;
+}
+
+.site-footer {
+    background-color: #d4ae6a;
+    color: #152d54;
+    font-size: .85rem;
+}
+
+.disclaimer {
+    background-color: #152d54;
+    color: #ffe0aa;
+    font-size: 0.8rem;
+    padding: 1rem;
+}
+
+/* Resize for desktop screens only */
+@media screen and (min-width: 600px) {
+
+    .site-nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    h1 {
+        font: 44px bold;
+    }
+
+    h2 {
+        font: 40px bold;
+        padding: 1rem;
+    }
+
+    th,
+    td {
+        font-size: 1rem;
+    }
+
+    table caption {
+        font-size: 1.4rem;
+    }
+
+    .site-nav a {
+        font-size: 14pt;
+    }
+
+    .monument-units {
+        flex-direction: row;
+        margin: 2rem 0 0 0;
+    }
+
+    .indiv-unit {
+        border: 1px solid;
+    }
+
+    .showcase {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .showcase2 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .showcase p,
+    .showcase2 p {
+        width: 50%;
+        padding: 1.5rem 2.5rem 1rem 1rem;
+    }
+
+    .showcase figure,
+    .showcase2 figure {
+        width: 50%;
+    }
+
+    /* consolidate the footer items into one row */
+    .site-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: .5rem;
+    }
+}

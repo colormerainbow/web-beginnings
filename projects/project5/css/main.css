@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap');
+
+/* new palette color codes
+CSS HEX 
+--dark-lava: #463f3aff;
+--middle-grey: #8a817cff;
+--pale-silver: #bcb8b1ff;
+--alabaster: #f4f3eeff;
+--melon: #e0afa0ff;
+
+CSS HSL 
+--dark-lava: hsla(25, 9%, 25%, 1);
+--middle-grey: hsla(21, 6%, 51%, 1);
+--pale-silver: hsla(38, 8%, 72%, 1);
+--alabaster: hsla(50, 21%, 95%, 1);
+--melon: hsla(14, 51%, 75%, 1);
+
+*/
+
+/* overall site formats for background, fonts, page spread */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amaranth', sans-serif;
+    margin: 0;
+    background-color: hsla(25, 9%, 25%, 1);
+}
+
+main {
+    max-width: 120ch;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: hsla(38, 8%, 72%, 1);
+}
+
+/* all hyperlinks have bold, italicized, underlined text
+main a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+*/
+
+footer a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ffe9be;
+    margin: 0 0 .5rem 1rem;
+}
+
+/* header formatting */
+header {
+    background-color: hsla(50, 21%, 95%, 1);
+    padding: 1rem 2rem .5rem 2.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-banner {
+    padding: 1rem 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.site-logo img {
+    max-width: 130px;
+    max-height: 120px;
+}
+
+/* site-nav formatting */
+.site-nav ul {
+    list-style: none;
+}
+
+.site-nav a {
+    color: hsla(25, 9%, 25%, 1);
+    font-family: 'Amaranth', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.site-nav a:hover {
+    color: #60993e;
+}
+
+/* Formatting for the drop list naviation  */
+.drop-list:hover .sub-nav {
+    opacity: 1;
+    display: block;
+    padding: 1rem;
+    position: absolute;
+    background: hsla(14, 51%, 75%, .9);
+    list-style: none;
+}
+
+.sub-nav {
+    /* transition: opacity 5.35s ease; */
+    /* use either opacity OR display none */
+    opacity: 0;
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    background: hsla(38, 8%, 72%, 1);
+    list-style: none;
+    color: hsla(50, 21%, 95%, 1);
+}
+
+.subnav li {
+    padding: .25rem;
+}
+
+/* status indicators for the site navigation */
+#home .home-pg,
+#rooms .rooms-pg,
+#specials .specials-pg,
+#about .about-pg,
+#contact .contact-pg {
+    color: hsla(21, 33%, 59%, 1);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+#isaiah .isaiah-pg,
+#york .york-pg,
+#williams .williams-pg,
+#reale .reale-pg,
+#thomas .thomas-pg,
+#denning .denning-pg {
+    color: #c44900;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+/* heading font styles */
+h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    color: hsla(25, 9%, 25%, 1);
+    font-size: 1.5rem;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    color: hsla(25, 9%, 25%, 1);
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 0px 2px 2px hsla(50, 21%, 95%, 1);
+    font-size: 2rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    padding: 1rem 0 1rem 0;
+}
+
+h4 {
+    margin: 1rem auto;
+}
+
+/* Home Page styling - remove images for mobile screens */
+.home-img1,
+.home-img2,
+.home-img3,
+.about-img1,
+.about-img2,
+.foot-logo img {
+    display: none;
+}
+
+/* border around content on main pages */
+.home-msgs,
+.about-main,
+.contact-msgs {
+    display: grid;
+    grid-column-gap: 0rem;
+    grid-row-gap: 0rem;
+    grid-template-columns: 1fr;
+    border: solid .6rem hsla(25, 9%, 25%, 1);
+}
+
+/* Sequence the background colors of matching blocks for cleaner layout */
+.intro1,
+.about1,
+.home-img1,
+.about-img1,
+.contact1,
+.testimonial {
+    background-color: hsla(14, 51%, 75%, .75);
+    text-align: center;
+    padding: 2rem 1rem 3rem 1rem;
+}
+
+.intro2,
+.home-img2 {
+    background-color: hsla(50, 21%, 95%, 1);
+    text-align: center;
+    padding: 2rem 1rem 3rem 1rem;
+}
+
+.intro3,
+.home-img3,
+.about2,
+.contact2,
+.about-img2 {
+    background-color: hsla(21, 6%, 51%, .85);
+    color: hsla(50, 21%, 95%, 1);
+    text-align: center;
+    padding: 2rem 1rem 3rem 1rem;
+}
+
+.home-msgs h3,
+.contact1 h3 {
+    text-align: center;
+    text-shadow: 0px 2px 2px hsla(50, 21%, 95%, .6);
+}
+
+.intro3 h3,
+.about2 h3,
+.contact2 h3 {
+    color: hsla(50, 21%, 95%, 1);
+    text-shadow: 0px 2px 2px hsla(25, 9%, 25%, 1);
+}
+
+/* Google Map Info formatting */
+
+.directions {
+    margin: 0 0 2rem 0;
+}
+
+.gmap-link {
+    border: 2px solid hsla(25, 9%, 25%, 1);
+    text-align: center;
+    vertical-align: bottom;
+    padding: 15px;
+    margin: 2rem;
+    border-radius: 30px;
+    box-shadow: hsla(25, 9%, 25%, 1) 0 0 4px 0;
+    font: italic;
+    font-size: 1.1rem;
+    color: hsla(25, 9%, 25%, 1);
+    background-color: hsla(50, 21%, 95%, 1);
+}
+
+.gmap-link:hover {
+    background: linear-gradient(to bottom, lightgreen, green);
+    color: hsla(50, 21%, 95%, 1);
+}
+
+.gmap-link:active {
+    background: hsla(201, 22%, 68%, 1);
+    color: hsla(25, 9%, 25%, 1);
+}
+
+.g-map {
+    padding: 2rem 0 1rem 0;
+}
+
+/* ----- Contact Form Formatting ---------*/
+.contactform {
+    border: solid hsla(197, 20%, 18%, 1);
+    background: hsla(201, 22%, 68%, 1);
+    color: hsla(25, 9%, 25%, 1);
+    padding: 1rem 0 1rem 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    width: 300px;
+}
+
+label,
+input {
+    display: block;
+    margin-top: .5rem;
+    text-align: left;
+}
+
+button {
+    display: block;
+    margin-top: 1rem;
+    padding: .5rem;
+    color: lightgrey;
+    background-color: green;
+    text-align: center;
+}
+
+/* css grid formatting - rooms and specials cards */
+.home-main,
+.contact-msgs {
+    display: grid;
+    grid-column-gap: 0rem;
+    grid-row-gap: 0rem;
+    grid-template-columns: 1fr;
+}
+
+.rooms-main,
+.specials-main {
+    display: grid;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    grid-template-columns: 1fr;
+}
+
+.promo h3,
+.promo-r h3 {
+    background-color: hsla(75, 10%, 40%, 1);
+    border: 2px solid hsla(25, 9%, 25%, 1);
+    color: hsla(50, 21%, 95%, 1);
+}
+
+.room-specs {
+    display: grid;
+    padding: 1rem 2rem 0 2rem;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.promo,
+.promo-r {
+    background-color: hsla(25, 9%, 25%, 1);
+    border: 2px solid hsla(25, 9%, 25%, 1);
+    padding: 3px;
+    color: hsla(50, 21%, 95%, 1);
+    display: grid;
+    grid-row-gap: 0rem;
+    justify-items: stretch;
+    align-items: center;
+    box-shadow: 0px 5px 5px hsla(25, 9%, 25%, .65);
+    text-align: center;
+}
+
+.promo {
+    grid-template-rows: .75fr 1.75fr 1fr .5fr;
+}
+
+.promo-r {
+    grid-template-rows: .75fr 1.75fr .1fr 1fr .5fr;
+}
+
+.pkg-type {
+    display: inline-grid;
+}
+
+/* position headers to be centered in the grid layouts on pages */
+.home-msgs h2,
+.contact-msgs h2,
+.rooms-main h2,
+.room-specs h3,
+.about-main h2,
+.specials-main h2,
+.specials-main,
+.specials-intro {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    padding: 0rem 0 1.5rem 0;
+}
+
+/* Format the content inside the grid boxes */
+
+.promo p,
+.promo-r p {
+    padding: 1rem .5rem 1rem .5rem;
+}
+
+.promo img,
+.promo-r img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* format the individual room photos */
+.room-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amenity img {
+    padding: 0rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* format the CTA buttons */
+.learn-more,
+.cta-book {
+    text-transform: uppercase;
+    background-color: #7ab338;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: #512500 0 0 4px 0;
+    text-shadow: #ffe0aa 1px 1px 1px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #122654;
+    margin: .5rem 0 .5rem 0;
+    text-decoration: none;
+}
+
+.learn-more:hover,
+.cta-book:hover {
+    background-color: pink;
+    background: linear-gradient(to bottom, lightgreen, green);
+    color: #174421;
+}
+
+.learn-more:active .cta-book:active {
+    background: #00FF00;
+}
+
+.singleroom h2,
+.singleroom h3 {
+    text-align: center;
+}
+
+/*special page layout styles */
+
+ul li {
+    margin: 0 0 0 2rem;
+}
+
+/* highlight testimonials */
+
+.test1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.cust {
+    border: 2px solid hsla(25, 9%, 25%, 1);
+    text-align: center;
+    vertical-align: bottom;
+    padding: 15px 15px 15px 15px;
+    border-radius: 50px;
+    box-shadow: hsla(25, 9%, 25%, 1) 0 0 4px 0;
+    text-shadow: hsla(25, 9%, 25%, .8) 1px 1px 1px;
+    font: italic;
+    font-size: 1.2rem;
+    color: hsla(50, 21%, 95%, 1);
+    margin: .5rem 1rem .5rem 1rem;
+    background-color: hsla(21, 6%, 51%, .85);
+}
+
+/* ----Format for the site footer and disclaimer -----*/
+
+
+.label {
+    font-weight: bold;
+    padding: .5rem 0 .5rem 0;
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer {
+    background-color: hsla(21, 6%, 51%, 1);
+    color: hsla(50, 21%, 95%, 1);
+    font-size: .85rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem 0 1rem 1rem;
+}
+
+.disclaimer {
+    background-color: hsla(21, 6%, 51%, 1);
+    color: hsla(25, 9%, 25%, 1);
+    font-size: 0.8rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Media Queries: Resize for tablet screens */
+
+@media screen and (min-width: 600px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .site-nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .site-nav a {
+        font-size: 1.1rem;
+    }
+
+    .home-msgs,
+    .contact-msgs {
+        display: grid;
+        grid-column-gap: 0rem;
+        grid-row-gap: 0rem;
+        grid-template-columns: repeat(2, 1fr);
+        border: solid .6rem hsla(25, 9%, 25%, 1);
+    }
+
+    .relax {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        text-align: center;
+    }
+
+    .rooms-main,
+    .specials-main {
+        display: grid;
+        grid-column-gap: .5rem;
+        grid-row-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Queries: Resize for larger desktop screens - pop in images  */
+@media screen and (min-width: 1000px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /*reveal images on home page and about page*/
+
+    .about-main {
+        display: grid;
+        grid-column-gap: 0rem;
+        grid-row-gap: 0rem;
+        grid-template-columns: repeat(2, 1fr);
+        border: solid .7rem hsla(25, 9%, 25%, 1);
+        text-align: center;
+    }
+
+    .home-img1,
+    .home-img2,
+    .home-img3,
+    .about-img1,
+    .about-img2 {
+        display: grid;
+        padding: 1rem 1rem 1rem 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .foot-logo img {
+        display: flex;
+        max-width: 120px;
+    }
+
+    .testimonial {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        text-align: center;
+    }
+
+    .relax-img {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        padding: 0 0 2rem 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        justify-content: center;
+    }
+
+    .rooms-main,
+    .specials-main {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contactform {
+        width: 400px;
+    }
+
+    .roomphoto img {
+        max-width: 900px;
+    }
+
+    .room-specs {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 1rem 0 1rem;
+    }
+}

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(209, 195, 177);
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    background: url(../images/paper-oldtexture.jpg) fixed;
+    background-size: cover;
+    /*background: hsla(3 16% 76%);*/
+}
+
+main {
+    max-width: 120ch;
+    margin: 0 auto;
+    padding: 2rem 0 0 0;
+}
+
+header {
+    background: rgb(209, 195, 177) url(../images/fallenleaves.jpeg) fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+header h1 {
+    background-color: lightgray;
+    background: rgba(71, 65, 65, 0.65);
+    color: #eee;
+    padding: 1rem;
+    text-shadow: 0px 2px 2px black;
+    text-align: center;
+    font-family: 'Caudex', serif;
+    margin-top: 10rem;
+}
+
+
+h2 {
+    font-family: 'Caudex', serif;
+    text-align: center;
+    padding: 0 0 1rem 0;
+    font-size: 150%;
+}
+
+h3 {
+    margin: 0rem auto;
+    background: rgba(71, 65, 65, 0.85);
+    color: #eee;
+    padding: 1rem 0 1rem 0;
+    font-family: 'Caudex', serif;
+    font-size: 130%;
+    text-align: center;
+}
+
+/* all hyperlinks have bold, italicized, underlined text */
+main a[href] {
+    font-family: 'Caudex', serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #9e196b;
+}
+
+footer a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    color: orange;
+}
+
+/*css grid formatting */
+.info-boxes {
+    display: grid;
+    margin: 1rem 0 0 0;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 0 1rem 0 1rem;
+}
+
+.info-boxes h2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.about-me,
+.my-goals,
+.progress,
+.learn,
+.projects,
+.labs {
+    border: solid rgb(42, 45, 48);
+}
+
+p {
+    padding: 1rem .5rem 1rem 1rem;
+}
+
+ul,
+ol {
+    padding: .5rem 0 1rem 2.5rem;
+}
+
+/* ----Format for the site footer  -----*/
+
+.site-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #eee;
+}
+
+.site-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.label {
+    font-weight: bold;
+    padding: .5rem 0 0 0;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footnote {
+    padding: 0;
+    font-size: .8rem;
+}
+
+footer {
+    background-color: rgba(71, 65, 65, 0.85);
+    margin: 2.5rem 0 0 0;
+    padding: 2rem 2rem 1rem 1rem;
+}
+
+
+/* Resize for tablet and larger desktop screens */
+
+@media screen and (min-width: 650px) {
+
+    header h1 {
+        margin-top: 18rem;
+    }
+
+    .info-boxes {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    header h1 {
+        margin-top: 25rem;
+    }
+
+    .info-boxes {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 1rem 0 1rem;
+    }
+}

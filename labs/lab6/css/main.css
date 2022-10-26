@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Amaranth:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* overall site formats for background, fonts, page spread */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amaranth', sans-serif;
+    margin: 0;
+    background: url(../images/sandwavesv.jpg);
+}
+
+main {
+    max-width: 120ch;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* all hyperlinks have bold, italicized, underlined text */
+main a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer a[href] {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* header formatting */
+header {
+    background-color: #512500;
+    padding: .5rem;
+    display: flex;
+}
+
+header img {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.header-banner {
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* site-nav formatting */
+.site-nav ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.site-nav a {
+    color: #ffe0aa;
+    font-family: 'Amaranth', sans-serif;
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+/* status indicators for the site navigation */
+#home .home-pg,
+#rooms .rooms-pg,
+#specials .specials-pg,
+#about .about-pg #contact .contact-pg {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+/* heading font styles */
+h1 {
+    font-family: 'Gentium Basic', serif;
+    margin: 0;
+    color: #ffe0aa;
+    text-shadow: 0px 2px 2px black;
+}
+
+h2,
+h3 {
+    font-family: 'Amaranth', sans-serif;
+    color: #152d54;
+}
+
+h2 {
+    text-align: center;
+    padding: .5rem 0 .5rem 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    padding: 2rem 0 1rem 0;
+}
+
+.room-ad h3 {
+    font-family: 'Gentium Basic', serif;
+    color: #ffe9be;
+}
+
+/* css grid formatting - rooms boxes */
+.rooms-main {
+    display: grid;
+    grid-column-gap: .5rem;
+    grid-row-gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.room-ad {
+    background-color: #122654;
+    border: 2px solid #122654;
+    color: #ffe9be;
+    ;
+}
+
+/* Format the text inside the grid boxes */
+.room-ad {
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* format the CTA buttons */
+.learn-more {
+    text-transform: uppercase;
+    background-color: #7ab338;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: #512500 0 0 4px 0;
+    text-shadow: #ffe0aa 1px 1px 1px;
+    font-weight: bold;
+    color: #122654;
+    margin: .5rem 0 .5rem 0;
+}
+
+.learn-more:hover {
+    background-color: pink;
+    background: linear-gradient(to bottom, lightblue, blue);
+    color: #ffffff;
+}
+
+.learn-more:active {
+    background: #982727;
+
+}
+
+
+
+/*special page layout styles */
+
+.facts p {
+    padding: 1rem 0 1rem 0;
+}
+
+
+/* ----Format for the site footer and disclaimer -----*/
+
+.credit-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.label {
+    font-weight: bold;
+    padding: .5rem 0 .5rem 0;
+}
+
+.revision {
+    font-weight: bold;
+    font-style: italic;
+    padding: .6rem 0 0 0;
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 0 2rem;
+}
+
+.links-footer li {
+    padding: .5rem 0 .5rem 0;
+}
+
+.site-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 .5rem 0 0;
+}
+
+.site-logos img {
+    max-width: 120px;
+}
+
+.site-info {
+    display: flex;
+    flex-direction: row;
+    padding: .2rem;
+}
+
+.site-footer {
+    background-color: #512500;
+    color: #ffe9be;
+    font-size: .85rem;
+}
+
+.disclaimer {
+    background-color: #152d54;
+    color: #ffe0aa;
+    font-size: 0.8rem;
+    padding: 1rem;
+}
+
+/* Resize for tablet and larger desktop screens */
+
+@media screen and (min-width: 600px) {
+
+    .rooms-main {
+        display: grid;
+        grid-column-gap: .5rem;
+        grid-row-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .site-nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    h1 {
+        font: 48px;
+    }
+
+    h2 {
+        font: 40px;
+        padding: 1rem;
+    }
+
+    .site-nav a {
+        font-size: 14pt;
+    }
+
+    .rooms-main {
+        display: grid;
+        grid-column-gap: .5rem;
+        grid-row-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* consolidate the footer items into one row */
+    .site-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: .5rem;
+    }
+}
